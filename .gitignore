@@ -1,0 +1,8 @@
+# Ignore a subfolder named 'data' anywhere in the project
+data/
+# Ignore a subfolder named 'plots' anywhere in the project
+plots/
+# Ignore a subfolder named 'reports' anywhere in the project
+reports/
+# Ignore a subfolder named 'ssim' anywhere in the project
+ssim/
