@@ -1,0 +1,376 @@
+level = auto_qc
+[Files]
+    file_path = Right click to browse
+    in_filename = Right click to browse (*.nc)
+    out_filename = Right click to browse (*.nc)
+    plot_path = Right click to browse
+[Options]
+    required_percent_good = 75
+[Variables]
+    [[CO2]]
+        [[[RangeCheck]]]
+            lower = 350
+            upper = 750
+        [[[DiurnalCheck]]]
+            numsd = 5
+        [[[MADCheck]]]
+            Fsd_threshold = 10
+            edge_threshold = 20,80
+            window_size = 13
+            zfc = 10
+        [[[IPRCheck]]]
+            upper_percentile = 90
+            lower_percentile = 10
+            num_ipr = 3.0
+            min_ipr = 0.01
+        [[[StepCheck]]]
+            jump = 100
+            zfc = 10
+    [[Fco2]]
+        [[[RangeCheck]]]
+            lower = -50
+            upper = 25
+        [[[DiurnalCheck]]]
+            numsd = 5
+        [[[MADCheck]]]
+            Fsd_threshold = 10
+            edge_threshold = 20,80
+            window_size = 13
+            zfc = 5.5
+#        [[[IPRCheck]]]
+#            upper_percentile = 90
+#            lower_percentile = 10
+#            num_ipr = 3.0
+#            min_ipr = 1.1
+    [[Fe]]
+        [[[RangeCheck]]]
+            lower = -100
+            upper = 750
+        [[[DiurnalCheck]]]
+            numsd = 5
+        [[[MADCheck]]]
+            Fsd_threshold = 10
+            edge_threshold = 20,80
+            window_size = 13
+            zfc = 5.5
+#        [[[IPRCheck]]]
+#            upper_percentile = 90
+#            lower_percentile = 10
+#            num_ipr = 3.0
+#            min_ipr = 1.1
+    [[Fg]]
+        [[[RangeCheck]]]
+            lower = -300
+            upper = 300
+        [[[DiurnalCheck]]]
+            numsd = 5
+        [[[MADCheck]]]
+            Fsd_threshold = 10
+            edge_threshold = 5,95
+            window_size = 30
+            zfc = 5.5
+        [[[IPRCheck]]]
+            upper_percentile = 90
+            lower_percentile = 10
+            num_ipr = 3.0
+            min_ipr = 0.01
+        [[[SSIM]]]
+            diff_threshold = 130
+            area_threshold = 100
+        [[[StepCheck]]]
+            jump = 50
+            zfc = 5.5
+    [[Fh]]
+        [[[RangeCheck]]]
+            lower = -100
+            upper = 750
+        [[[DiurnalCheck]]]
+            numsd = 5
+        [[[MADCheck]]]
+            Fsd_threshold = 12
+            edge_threshold = 20,80
+            window_size = 13
+            zfc = 5.5
+#        [[[IPRCheck]]]
+#            upper_percentile = 90
+#            lower_percentile = 10
+#            num_ipr = 3.0
+#            min_ipr = 1.1
+    [[Fld]]
+        [[[RangeCheck]]]
+            lower = 250
+            upper = 700
+        [[[DiurnalCheck]]]
+            numsd = 5
+        [[[MADCheck]]]
+            Fsd_threshold = 12
+            edge_threshold = 20,80
+            window_size = 13
+            zfc = 5.5
+        [[[IPRCheck]]]
+            upper_percentile = 90
+            lower_percentile = 10
+            num_ipr = 3.0
+            min_ipr = 0.01
+        [[[SSIM]]]
+            diff_threshold = 130
+            area_threshold = 100
+        [[[StepCheck]]]
+            jump = 100
+            zfc = 5.5
+    [[Flu]]
+        [[[RangeCheck]]]
+            lower = 300
+            upper = 700
+        [[[DiurnalCheck]]]
+            numsd = 5
+        [[[MADCheck]]]
+            Fsd_threshold = 12
+            edge_threshold = 20,80
+            window_size = 13
+            zfc = 5.5
+        [[[IPRCheck]]]
+            upper_percentile = 90
+            lower_percentile = 10
+            num_ipr = 3.0
+            min_ipr = 0.01
+        [[[SSIM]]]
+            diff_threshold = 130
+            area_threshold = 100
+        [[[StepCheck]]]
+            jump = 100
+            zfc = 5.5
+    [[Fn]]
+        [[[RangeCheck]]]
+            lower = -100
+            upper = 1000
+        [[[DiurnalCheck]]]
+            numsd = 5
+        [[[MADCheck]]]
+            Fsd_threshold = 12
+            edge_threshold = 20,80
+            window_size = 13
+            zfc = 5.5
+        [[[IPRCheck]]]
+            upper_percentile = 90
+            lower_percentile = 10
+            num_ipr = 3.0
+            min_ipr = 0.01
+        [[[SSIM]]]
+            diff_threshold = 130
+            area_threshold = 100
+        [[[StepCheck]]]
+            jump = 500
+            zfc = 5.5
+    [[Fsd]]
+        [[[RangeCheck]]]
+            lower = -10
+            upper = 1500
+        [[[DiurnalCheck]]]
+            numsd = 5
+        [[[MADCheck]]]
+            Fsd_threshold = 12
+            edge_threshold = 20,80
+            window_size = 13
+            zfc = 5.5
+        [[[GMADCheck]]]
+            scale_factor = 1.4826
+            numsd = 5
+            window_size = 25
+        [[[IPRCheck]]]
+            upper_percentile = 90
+            lower_percentile = 10
+            num_ipr = 3.0
+            min_ipr = 0.01
+        [[[SSIM]]]
+            diff_threshold = 130
+            area_threshold = 100
+        [[[StepCheck]]]
+            jump = 500
+            zfc = 5.5
+    [[Fsu]]
+        [[[RangeCheck]]]
+            lower = -10
+            upper = 500
+        [[[DiurnalCheck]]]
+            numsd = 5
+        [[[MADCheck]]]
+            Fsd_threshold = 12
+            edge_threshold = 20,80
+            window_size = 13
+            zfc = 5.5
+        [[[IPRCheck]]]
+            upper_percentile = 90
+            lower_percentile = 10
+            num_ipr = 3.0
+            min_ipr = 0.01
+        [[[SSIM]]]
+            diff_threshold = 130
+            area_threshold = 100
+        [[[StepCheck]]]
+            jump = 100
+            zfc = 5.5
+    [[RH]]
+        [[[RangeCheck]]]
+            lower = 0
+            upper = 110
+        [[[DiurnalCheck]]]
+            numsd = 5
+        [[[MADCheck]]]
+            Fsd_threshold = 12
+            edge_threshold = 20,80
+            window_size = 13
+            zfc = 5.5
+        [[[IPRCheck]]]
+            upper_percentile = 90
+            lower_percentile = 10
+            num_ipr = 3.0
+            min_ipr = 0.01
+        [[[SSIM]]]
+            diff_threshold = 130
+            area_threshold = 100
+        [[[StepCheck]]]
+            jump = 30
+            zfc = 5.5
+    [[SH]]
+        [[[RangeCheck]]]
+            lower = 0.001
+            upper = 0.030
+        [[[DiurnalCheck]]]
+            numsd = 5
+        [[[MADCheck]]]
+            Fsd_threshold = 12
+            edge_threshold = 20,80
+            window_size = 13
+            zfc = 5.5
+        [[[IPRCheck]]]
+            upper_percentile = 90
+            lower_percentile = 10
+            num_ipr = 3.0
+            min_ipr = 0.01
+        [[[StepCheck]]]
+            jump = 0.005
+            zfc = 5.5
+    [[Sws]]
+        [[[RangeCheck]]]
+            lower = 0.01
+            upper = 0.8
+        [[[DiurnalCheck]]]
+            numsd = 5
+        [[[MADCheck]]]
+            Fsd_threshold = 12
+            edge_threshold = 20,80
+            window_size = 13
+            zfc = 5.5
+        [[[IPRCheck]]]
+            upper_percentile = 90
+            lower_percentile = 10
+            num_ipr = 1.5
+            min_ipr = 0.01
+        [[[SSIM]]]
+            diff_threshold = 130
+            area_threshold = 100
+        [[[StepCheck]]]
+            jump = 0.25
+            zfc = 5.5
+    [[Ta]]
+        [[[RangeCheck]]]
+            lower = -10
+            upper = 50
+        [[[DiurnalCheck]]]
+            numsd = 5
+        [[[MADCheck]]]
+            Fsd_threshold = 12
+            edge_threshold = 20,80
+            window_size = 13
+            zfc = 5.5
+        [[[IPRCheck]]]
+            upper_percentile = 90
+            lower_percentile = 10
+            num_ipr = 1.5
+            min_ipr = 0.01
+        [[[SSIM]]]
+            diff_threshold = 130
+            area_threshold = 100
+        [[[StepCheck]]]
+            jump = 10
+            zfc = 5.5
+    [[Ts]]
+        [[[RangeCheck]]]
+            lower = 0
+            upper = 60
+        [[[DiurnalCheck]]]
+            numsd = 5
+        [[[MADCheck]]]
+            Fsd_threshold = 12
+            edge_threshold = 20,80
+            window_size = 13
+            zfc = 5.5
+        [[[IPRCheck]]]
+            upper_percentile = 90
+            lower_percentile = 10
+            num_ipr = 1.5
+            min_ipr = 0.01
+        [[[SSIM]]]
+            diff_threshold = 130
+            area_threshold = 100
+        [[[StepCheck]]]
+            jump = 10
+            zfc = 5.5
+    [[ustar]]
+        [[[RangeCheck]]]
+            lower = 0.01
+            upper = 2.0
+        [[[DiurnalCheck]]]
+            numsd = 5
+        [[[MADCheck]]]
+            Fsd_threshold = 12
+            edge_threshold = 20,80
+            window_size = 13
+            zfc = 5.5
+#        [[[IPRCheck]]]
+#            upper_percentile = 90
+#            lower_percentile = 10
+#            num_ipr = 3.0
+#            min_ipr = 1.1
+    [[Ws]]
+        [[[RangeCheck]]]
+            lower = 0.01
+            upper = 25.0
+        [[[DiurnalCheck]]]
+            numsd = 5
+        [[[MADCheck]]]
+            Fsd_threshold = 12
+            edge_threshold = 20,80
+            window_size = 13
+            zfc = 5.5
+        [[[IPRCheck]]]
+            upper_percentile = 90
+            lower_percentile = 10
+            num_ipr = 3.0
+            min_ipr = 0.01
+        [[[SSIM]]]
+            diff_threshold = 130
+            area_threshold = 100
+        [[[StepCheck]]]
+            jump = 10
+            zfc = 5.5
+    [[Wd]]
+        [[[RangeCheck]]]
+            lower = 0
+            upper = 360
+        [[[DiurnalCheck]]]
+            numsd = 5
+        [[[MADCheck]]]
+            Fsd_threshold = 12
+            edge_threshold = 20,80
+            window_size = 13
+            zfc = 5.5
+#        [[[IPRCheck]]]
+#            upper_percentile = 90
+#            lower_percentile = 10
+#            num_ipr = 3.0
+#            min_ipr = 1.1
+        [[[SSIM]]]
+            diff_threshold = 130
+            area_threshold = 100

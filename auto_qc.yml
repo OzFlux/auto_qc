@@ -1,0 +1,26 @@
+name: pfp_qc
+channels:
+  - conda-forge
+dependencies:
+  - python
+  - configobj
+  - python-dateutil
+  - jupyterlab
+  - lmfit
+  - matplotlib
+  - netcdf4
+  - numpy
+  - opencv
+  - openpyxl
+  - pandas
+  - pyqt
+  - pytz
+  - scikit-image
+  - scipy
+  - statsmodels
+  - timezonefinder
+  - windrose
+  - xarray
+  - xlwt
+  - xlrd
+  - xlsxwriter
